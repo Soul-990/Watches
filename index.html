@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Basel Watches</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-black navbar-dark border-bottom sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" alt="Basel Watches"/>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link" href="cart.html">
+                <i class="bi bi-bag"></i> Cart
+                <span
+                  class="badge rounded-pill bg-info text-dark"
+                  id="cartCount">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero" data-bs-slide-to="1" aria-label="Slide 2"> </button>
+        <button type="button" data-bs-target="#hero" data-bs-slide-to="2" aria-label="Slide 3"> </button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="img/slider.png" class="d-block w-100" alt="TIME IS NOW" />
+          <div class="carousel-caption p-4">
+            <h2>TIME IS NOW</h2>
+            <p>
+              Precision engineering meets timeless design. Discover watches
+              built to last a lifetime.
+            </p>
+            <a href="shop.html" class="btn btn-info btn-lg">Shop Now</a>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/slider.png" class="d-block w-100" alt="CRAFTED TO PERFECTION" />
+          <div class="carousel-caption p-4">
+            <h2>CRAFTED TO PERFECTION</h2>
+            <p>
+              Every movement is tested for accuracy, every detail finished by
+              hand.
+            </p>
+            <a href="shop.html" class="btn btn-info btn-lg">Shop Now</a>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/slider.png" class="d-block w-100" alt="WEAR YOUR STYLE"/>
+          <div class="carousel-caption p-4">
+            <h2>WEAR YOUR STYLE</h2>
+            <p>
+              From classic leather to rugged sport, find the watch that fits
+              your story.
+            </p>
+            <a href="shop.html" class="btn btn-info btn-lg">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="container spacing-margin">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="aboutleft">
+            <img src="img/aboutimage.jpg" alt="Featured watch" class="img-fluid"/>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-6">
+          <h2 class="section-heading navbarheading">Featured Products</h2>
+          <p class="section-para">
+            Our best sellers combine classic proportions with modern materials.
+            Each piece is water resistant, scratch resistant and backed by a
+            two-year warranty. Find the one that fits your wrist and your story.
+          </p>
+          <a href="shop.html" class="btn btn-outline-info btn-lg">Browse the Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container spacing-margin">
+      <div class="text-center mb-4">
+        <h2 class="section-heading navbarheading fs-1">Best Sellers</h2>
+        <p class="text-secondary">Handpicked favourites from our collection</p>
+      </div>
+      <div class="row g-4" id="featured"></div>
+    </section>
+
+    <section class="container spacing-margin">
+      <div class="text-center mb-4">
+        <h2 class="section-heading navbarheading fs-1">Our Services</h2>
+        <p class="text-secondary">Why thousands of customers trust us</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-award-fill fs-1 navbarheading"></i>
+            <h5>Premium Quality</h5>
+            <p>
+              Every watch is built with sapphire glass, stainless steel and
+              precision movements.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-truck fs-1 navbarheading"></i>
+            <h5>Free Shipping</h5>
+            <p>
+              Free insured delivery on all orders above $200, anywhere in the
+              country.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-shield-check fs-1 navbarheading"></i>
+            <h5>2-Year Warranty</h5>
+            <p>
+              Full manufacturer warranty plus free servicing in the first year.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-arrow-repeat fs-1 navbarheading"></i>
+            <h5>30-Day Returns</h5>
+            <p>
+              Not in love with it? Send it back within 30 days for a full
+              refund.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-tools fs-1 navbarheading"></i>
+            <h5>Repair & Service</h5>
+            <p>
+              Our certified watchmakers keep your timepiece running like new.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card">
+            <i class="bi bi-headset fs-1 navbarheading"></i>
+            <h5>24/7 Support</h5>
+            <p>
+              Questions about sizing or straps? Our team is always a message
+              away.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats spacing-margin">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <div class="stat-num" data-count="25+">25+</div>
+            <div class="text-secondary">Years of Craft</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-num" data-count="12K">12K</div>
+            <div class="text-secondary">Happy Customers</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-num" data-count="40+">40+</div>
+            <div class="text-secondary">Models</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-num" data-count="15">15</div>
+            <div class="text-secondary">Countries</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container spacing-margin">
+      <div class="text-center mb-4">
+        <h2 class="section-heading navbarheading fs-1">What Customers Say</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testi">
+            <img src="img/imgi_95_default.jpg" alt="" class="img-fluid" />
+            <div class="stars">★★★★★</div>
+            <p>
+              “Wore the Sport Watch in the pool and the gym every day. Still
+              flawless.”
+            </p>
+            <strong class="navbarheading">Hamza R.</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testi">
+            <img
+              src="img/imgi_328_portrait-confident-young-businesswoman-digital-nomad-posing-her-office-wearing-casual-clothes_1258-195337.jpg"
+              alt="hlo"
+              class="img-fluid"
+            />
+            <div class="stars">★★★★★</div>
+            <p>
+              “The Classic Watch looks even better in person. Feels premium and
+              arrived in two days!”
+            </p>
+            <strong class="navbarheading">Ayesha K.</strong>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testi">
+            <img
+              src="img/imgi_333_young-smiling-woman-with-short-curly-hair-wireless-earphones_574295-3790.jpg"
+              alt=""
+              class="img-fluid"
+            />
+            <div class="stars">★★★★★</div>
+            <p>
+              “Beautiful packaging, fast support, and a perfect gift for my
+              brother.”
+            </p>
+            <strong class="navbarheading">Sara M.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta spacing-margin">
+      <div class="container text-center">
+        <h2>Ready to find your perfect watch?</h2>
+        <p>Visit the shop or talk to our team for personal advice.</p>
+        <a href="shop.html" class="btn btn-info btn-lg me-2">Shop Now</a><a href="contact.html" class="btn btn-outline-light btn-lg">Contact Us</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="img/logo.png" alt="Basel Watches" class="footer-logo" />
+            <p class="mt-3 text-secondary">
+              Timeless watches crafted for people who value every second.
+              Classic, sport and digital collections with free shipping over
+              $200.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="navbarheading">Explore</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="navbarheading">Contact</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="bi bi-geo-alt"></i> 12 Clock Tower Road, Lahore</li>
+              <li><i class="bi bi-telephone"></i> +92 300 0000000</li>
+              <li><i class="bi bi-envelope"></i> hello@baselwatches.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="navbarheading">Newsletter</h5>
+            <form id="newsletterForm" class="input-group">
+              <input type="email" class="form-control" placeholder="Your email" required aria-label="Email"/>
+              <button class="btn btn-info" type="submit">Join</button>
+            </form>
+            <div id="newsletterMsg" class="small mt-2 text-info"></div>
+            <div class="social mt-3">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4" />
+        <p class="text-center text-secondary mb-0 small">
+          &copy; 2026 Basel &amp; Co. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <button id="toTop" class="to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+      <div id="appToast" class="toast text-bg-info" role="alert">
+        <div class="toast-body" id="toastBody"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      renderProducts("featured", products.slice(0, 3));
+    </script>
+  </body>
+</html>

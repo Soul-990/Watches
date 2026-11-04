@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart | Basel Watches</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-black navbar-dark border-bottom sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logo.png" alt="Basel Watches"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link" href="cart.html"
+                ><i class="bi bi-bag"></i> Cart
+                <span
+                  class="badge rounded-pill bg-info text-dark"
+                  id="cartCount"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="page-hero">
+      <div class="container text-center">
+        <h1 class="navbarheading">Your Cart</h1>
+        <p>Review your items before checkout</p>
+      </div>
+    </header>
+
+    <section class="container spacing-margin-sm">
+      <div id="cartEmpty" class="text-center d-none py-5">
+        <i class="bi bi-bag-x display-1 text-secondary"></i>
+        <h3 class="mt-3">Your cart is empty</h3>
+        <a href="shop.html" class="btn btn-info mt-2">Continue Shopping</a>
+      </div>
+      <div class="row g-4" id="cartFull">
+        <div class="col-lg-8">
+          <div class="table-responsive">
+            <table class="table table-dark align-middle">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Total</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="cartBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="summary">
+            <h4 class="navbarheading">Order Summary</h4>
+            <div class="d-flex justify-content-between">
+              <span>Subtotal</span><span id="sSub">$0.00</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Shipping</span><span id="sShip">$0.00</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between fs-4">
+              <span>Total</span><strong id="sTotal">$0.00</strong>
+            </div>
+            <button class="btn btn-info w-100 mt-3" id="checkoutBtn">
+              Checkout
+            </button>
+            <button class="btn btn-outline-light w-100 mt-2" id="clearBtn">
+              Clear Cart
+            </button>
+            <p class="small text-secondary mt-3 mb-0">
+              Free shipping on orders over $200.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="img/logo.png" alt="Basel Watches" class="footer-logo" />
+            <p class="mt-3 text-secondary">
+              Timeless watches crafted for people who value every second.
+              Classic, sport and digital collections with free shipping over
+              $200.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="navbarheading">Explore</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="navbarheading">Contact</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="bi bi-geo-alt"></i> 12 Clock Tower Road, Lahore</li>
+              <li><i class="bi bi-telephone"></i> +92 300 0000000</li>
+              <li><i class="bi bi-envelope"></i> hello@baselwatches.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="navbarheading">Newsletter</h5>
+            <form id="newsletterForm" class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your email"
+                required
+                aria-label="Email"
+              />
+              <button class="btn btn-info" type="submit">Join</button>
+            </form>
+            <div id="newsletterMsg" class="small mt-2 text-info"></div>
+            <div class="social mt-3">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i></a
+              ><a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i></a
+              ><a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i></a
+              ><a href="#" aria-label="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4" />
+        <p class="text-center text-secondary mb-0 small">
+          &copy; 2026 Basel &amp; Co. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <button id="toTop" class="to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+      <div id="appToast" class="toast text-bg-info" role="alert">
+        <div class="toast-body" id="toastBody"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      initCart();
+    </script>
+  </body>
+</html>

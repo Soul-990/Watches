@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+}
+
+p,
+li,
+label,
+input,
+select,
+textarea,
+td,
+th {
+  font-size: 1.1rem;
+}
+
+.navbarheading {
+  color: aqua;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar .nav-link {
+  font-size: 1.25rem;
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: aqua;
+}
+
+.carousel-item img {
+  height: 520px;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.carousel-caption {
+  text-align: left;
+  left: 8%;
+  right: auto;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 520px;
+}
+
+.carousel-caption h2 {
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: aqua;
+}
+
+.carousel-caption p {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 767px) {
+  .carousel-item img {
+    height: 380px;
+  }
+
+  .carousel-caption {
+    left: 5%;
+    right: 5%;
+    max-width: none;
+  }
+
+  .carousel-caption h2 {
+    font-size: 2.4rem;
+  }
+
+  .carousel-caption p {
+    display: none;
+  }
+}
+
+.spac {
+  margin-top: 100px;
+}
+
+.spacing-margin {
+  margin-top: 100px;
+}
+
+.spacing-margin-sm {
+  margin-top: 60px;
+}
+
+.section-heading {
+  font-size: 2.6rem;
+}
+
+.section-para {
+  color: #bbb;
+}
+
+.aboutleft img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.page-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    url("../img/slider.png") center/cover;
+  padding: 80px 0;
+  border-bottom: 1px solid #222;
+}
+
+.page-hero h1 {
+  font-size: 4rem;
+}
+
+.page-hero p {
+  color: #ccc;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.service-card {
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px 24px;
+  text-align: center;
+  height: 100%;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: aqua;
+}
+
+.service-card h5 {
+  margin-top: 14px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: #aaa;
+  margin: 0;
+}
+
+.product-card {
+  background: #000;
+  color: #fff;
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: aqua;
+}
+
+.product-card .img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card img {
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.product-card .cat {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.product-card .price {
+  color: aqua;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.stats {
+  background: #000;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  padding: 50px 0;
+}
+
+.stat-num {
+  font-size: 3.5rem;
+  color: aqua;
+  line-height: 1;
+}
+
+.testi {
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 28px;
+  height: 100%;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.3rem;
+}
+
+.testi p {
+  color: #ccc;
+}
+
+.cta {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("../img/slider.png") center/cover;
+  padding: 80px 0;
+}
+
+.cta h2 {
+  font-size: 3rem;
+}
+
+.cta p {
+  color: #ccc;
+  font-size: 1.3rem;
+}
+
+/* about */
+.team-card {
+  text-align: center;
+}
+
+.team-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 2px solid aqua;
+  padding-left: 28px;
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: aqua;
+}
+
+.tl-year {
+  color: aqua;
+  font-size: 2rem;
+}
+
+.tl-item p {
+  color: #bbb;
+  margin: 0;
+}
+
+/* shop */
+.shop-tools .form-control,
+.shop-tools .form-select,
+.contact-form .form-control,
+.contact-form .form-select {
+  background: #000;
+  color: #fff;
+  border-color: #333;
+}
+
+.shop-tools .form-control:focus,
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: aqua;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.15);
+}
+
+#pmSpecs li {
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.gallery-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 14px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: aqua;
+  font-size: 1.4rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-cap {
+  transform: none;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  align-items: flex-start;
+}
+
+.info-item i {
+  color: aqua;
+  font-size: 1.6rem;
+}
+
+.contact-form {
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 12px;
+  filter: invert(0.9) hue-rotate(180deg);
+}
+
+.cart-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.summary {
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 26px;
+}
+
+.qty {
+  width: 120px;
+}
+
+.site-footer {
+  background: #000;
+  border-top: 1px solid #222;
+  margin-top: 100px;
+  padding: 60px 0 24px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+  color: #999;
+}
+
+.footer-links a {
+  color: #999;
+}
+
+.footer-links a:hover {
+  color: aqua;
+}
+
+.social a {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 14px;
+}
+
+.social a:hover {
+  color: aqua;
+}
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: aqua;
+  color: #000;
+  display: none;
+  z-index: 1000;
+}
+
+.to-top.show {
+  display: block;
+}

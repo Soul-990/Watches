@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop | Basel Watches</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-black navbar-dark border-bottom sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="img/logo.png" alt="Basel Watches"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link" href="cart.html"
+                ><i class="bi bi-bag"></i> Cart
+                <span
+                  class="badge rounded-pill bg-info text-dark"
+                  id="cartCount"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="page-hero">
+      <div class="container text-center">
+        <h1 class="navbarheading">Our Products</h1>
+        <p>Find the watch that fits your style</p>
+      </div>
+    </header>
+
+    <section class="container spacing-margin-sm">
+      <div class="row g-3 mb-4 align-items-center shop-tools">
+        <div class="col-md-5">
+          <input
+            id="search"
+            type="search"
+            class="form-control"
+            placeholder="Search watches..."
+            aria-label="Search"
+          />
+        </div>
+        <div class="col-md-4">
+          <div class="btn-group w-100" role="group" id="filters">
+            <button class="btn btn-outline-info active" data-filter="all">
+              All
+            </button>
+            <button class="btn btn-outline-info" data-filter="Classic">
+              Classic
+            </button>
+            <button class="btn btn-outline-info" data-filter="Sport">
+              Sport
+            </button>
+            <button class="btn btn-outline-info" data-filter="Digital">
+              Digital
+            </button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <select id="sort" class="form-select" aria-label="Sort">
+            <option value="default">Sort: Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-4" id="data"></div>
+      <p id="noResults" class="text-center text-secondary d-none fs-4 my-5">
+        No watches match your search.
+      </p>
+    </section>
+    <div
+      class="modal fade"
+      id="productModal"
+      tabindex="-1"
+      aria-labelledby="pmTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-black text-white border-secondary">
+          <div class="modal-header border-secondary">
+            <h1 class="modal-title fs-4 navbarheading" id="pmTitle"></h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-5">
+                <img id="pmImg" class="img-fluid rounded" alt="" />
+              </div>
+              <div class="col-md-7">
+                <span class="badge bg-info text-dark mb-2" id="pmCat"></span>
+                <p id="pmDesc"></p>
+                <ul id="pmSpecs" class="list-unstyled"></ul>
+                <h3 class="navbarheading" id="pmPrice"></h3>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-secondary">
+            <button class="btn btn-outline-light" data-bs-dismiss="modal">
+              Close</button
+            ><button class="btn btn-info" id="pmAdd">
+              <i class="bi bi-bag-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="img/logo.png" alt="Basel Watches" class="footer-logo" />
+            <p class="mt-3 text-secondary">
+              Timeless watches crafted for people who value every second.
+              Classic, sport and digital collections with free shipping over
+              $200.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="navbarheading">Explore</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="navbarheading">Contact</h5>
+            <ul class="list-unstyled footer-links">
+              <li><i class="bi bi-geo-alt"></i> 12 Clock Tower Road, Lahore</li>
+              <li><i class="bi bi-telephone"></i> +92 300 0000000</li>
+              <li><i class="bi bi-envelope"></i> hello@baselwatches.com</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="navbarheading">Newsletter</h5>
+            <form id="newsletterForm" class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your email"
+                required
+                aria-label="Email"
+              />
+              <button class="btn btn-info" type="submit">Join</button>
+            </form>
+            <div id="newsletterMsg" class="small mt-2 text-info"></div>
+            <div class="social mt-3">
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i></a
+              ><a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i></a
+              ><a href="#" aria-label="Twitter"
+                ><i class="bi bi-twitter-x"></i></a
+              ><a href="#" aria-label="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary mt-4" />
+        <p class="text-center text-secondary mb-0 small">
+          &copy; 2026 Basel &amp; Co. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <button id="toTop" class="to-top" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+      <div id="appToast" class="toast text-bg-info" role="alert">
+        <div class="toast-body" id="toastBody"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      initShop();
+    </script>
+  </body>
+</html>
